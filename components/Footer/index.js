@@ -16,7 +16,7 @@ const Footer = ({}) => {
             <h1 className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl text-bold">
               TOGETHER
             </h1>
-            <a href="mailto:fhassany@my.bcit.ca" target="_blank"><Button type="primary">Contact Me</Button></a>
+            <a href="mailto:fhassany@my.bcit.ca" target="_blank" rel="noreferrer"><Button type="primary">Contact Me</Button></a>
             <div className="mt-10">
               <Socials />
             </div>
