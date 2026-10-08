@@ -936,6 +936,13 @@
       padding: 30px 10px;
       border-top: 3px solid var(--ink);
     }
+    /* iOS Safari's floating bottom toolbar can cover footer content.
+       -webkit-touch-callout only exists on iOS, so Android/desktop are unaffected. */
+    @supports (-webkit-touch-callout: none) {
+      footer {
+        padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 110px);
+      }
+    }
     footer a {
       color: var(--a);
       text-decoration: underline;
@@ -948,6 +955,13 @@
       margin-top: 14px;
       color: var(--mute);
       opacity: 0.8;
+    }
+    /* arrows aren't in the pixel font, so pin them to system symbol fonts
+       and size them up for consistent rendering across devices */
+    .footer-konami-hint .k-arrow {
+      font-family: "Segoe UI Symbol", "Noto Sans Symbols 2", "Noto Sans Symbols", "Apple Symbols", "DejaVu Sans", sans-serif;
+      font-size: 1.5em;
+      line-height: 1;
     }
 
     /* Reduced Motion */
